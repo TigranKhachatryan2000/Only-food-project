@@ -1,0 +1,710 @@
+/* Popoxakan talis enq */
+:root {
+  /* Sa kayqi guyni popoxakann e!!! */
+  --acsentColor: rgb(250, 141, 39);
+  --mainBorder: 3px solid var(--acsentColor);
+  --acsentHover: rgb(243, 121, 7);
+}
+
+/* "*"@ nshanakum e bolor teger@ */
+* {
+  /* Ayspes e grvum vorpeszi bolor heravorutyunne@ zroyanan ev menq konkret tiv tenq ev bolor brauzerne@ @ndunene!!! */
+  margin: 0;
+  padding: 0;
+}
+/* Vorpezi bolor articll=ner@ margin unenan!!! */
+article {
+  margin: 60px 0;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 15px 0;
+}
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+h2::after {
+  /* "content@" hnaravorutyune talis datarkutyun stexcel vor heto CSS-ov hatkutyunnner avelacnenq */
+  /* after ev before-i depqum content@ partadir e!!! */
+  content: "";
+  /* Ays hraman@ talis enq vor element@ ijni H2-i tak!!! */
+  display: block;
+  border-bottom: var(--mainBorder);
+  width: 120px;
+  margin: 30px auto;
+}
+a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+}
+.row {
+  width: 90%;
+  /* Ays hramanov "0"-n cusyc e talis vor uxahayac uxxutyamb texasharj chi linum, isk "auto"-n vor beri kentron!!! */
+  /* "padding"-@ auto chuni!!! */
+  /* "auto"-n ashxatum e ayn depqum erb ir element@ ceric cer chi!!! */
+  /* " */
+  margin: 0 auto;
+}
+.btn {
+  /* Ays hraman@ talis enq vorpeszi paddingner@ verev nerqev ashxaten */
+  display: inline-block;
+  color: white;
+  /* Ays "none" atributov texti taki.. mer orinakum hxman taki gcern enq hanum!!! */
+  text-decoration: none;
+  font-size: 1.2rem;
+  border: 3px solid orange;
+  border-radius: 30px;
+  background: var(--acsentColor);
+  padding: 10px 25px;
+}
+/* Stexcum enq hover@ */
+.btn:hover {
+  /* Texadrum enq hover@*/
+  background: var(--acsentHover);
+  border-color: var(--acsentHover);
+}
+.btn-outline {
+  /* Ays "transparent"@ sarqum e tapancik */
+  background-color: transparent;
+}
+html,
+body {
+  /* @ntaniq@ partadir nshvum e */
+  font-family: lato, Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: rgb(27, 27, 27);
+  /* Ays "scroll-behavior-i" ognutyamb navigaciayi hxman@ sexmelis aveli slacik e ijnum trvac hxmamb @ntacox kayqi voreve hatvac@ */
+  scroll-behavior: smooth;
+  background-color: #fff;
+}
+/* Ete background positionum grvum e mi arjeq apa 2rd arjeq@ hamarjeq center  */
+header {
+  /* Verjin grvac black@ cuyc e talis vor ete nkar@ chbaci fon@ sev cuyc ta!!! */
+  /* Linier-grDIENT2 hnaravorutyun e talis fonin tal 1ic avel guyn!!! */
+  /* :: background:linear-gradient(); grelacevn e!!! */
+  background: linear-gradient(rgba(27, 15, 15, 0.568), rgba(26, 24, 24, 0.616)),
+    url(../img/hero.jpg) no-repeat fixed center / cover, rgb(0, 0, 0);
+
+  color: white;
+  background-size: cover;
+  /* "vh" ays svoystvan cuyc e talis ekrani barcrutyan amboxj chapov!!! */
+  height: 100vh;
+}
+header h1 {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 3rem;
+  margin-top: 80px;
+}
+@media screen and (min-width:920px) {
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: black;
+}
+.images img {
+  width: 100%;
+  /* Ays pramanov nkar mecanum e */
+  transform: scale(1.1);
+  /* animacian 0.5 varkyanum */
+  transition: 0.5s;
+  /* opacit-n cuyc e talis nkari tapanceliutyan astichan */
+  opacity: 0.5;
+}
+.images figure {
+  /* vor nkari avelacac mas durc chga ir mashtabic */
+  overflow: hidden;
+}
+.images figure:hover img {
+  transform: scale(1.2);
+  opacity: 1;
+}
+}
+@media screen and (min-width:768px) and (max-width: 920px){
+  .images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+ }
+  .images img {
+    width: 100%;
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+  .images figure {
+    overflow: hidden;
+  }
+  .images img:hover{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+@media screen and (min-width:368px) and (max-width: 768px){
+  .images {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: black;
+ }
+  .images img {
+    width: 100%;
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: 0.5s;
+  }
+  .images figure {
+    overflow: hidden;
+  }
+  .images img:hover{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+header nav {
+  display: flex;
+  /* Ays hramanov elementneric logon mnum e cax hxumner@ aj!!! */
+  justify-content: space-between;
+  /* "flex-blok" elementneri tex@ voroshum enq hetevyal kerp!!! */
+  align-items: center;
+  padding-top: 30px;
+}
+header nav img {
+  width: 120px;
+}
+header nav ul {
+  /* Ays "dysplay-flex" hramanov elementner@ irar koxq en dasavorvum!!! */
+  display: flex;
+  /* Ays hramanov bolor elementner@ "ul"-i berum e kentrob!!!*/
+  justify-content: flex-end;
+  /* Ays kerp "ul"-i miji ketern veracnum enq!!! */
+  /* "cicle" datark oxakner e berum, voreve erkri grenq orinak armenian, "lover-roman"- hromeakan "squer@" qarakusiner!!! */
+  list-style-type: none;
+}
+header nav li {
+  padding-bottom: 5px;
+  border-bottom: var(--mainBorder);
+  /* Ays hramanov navi migi hxumner@ arden arancin arancin mknikov pahelis miayn ayd hxman tak k@ngcvi ayl voch te amboxj toxov!!! */
+  border-bottom-color: transparent;
+}
+header nav li:hover {
+  border-bottom: var(--mainBorder);
+}
+header nav li:not(header nav li:last-of-type) {
+  margin-right: 30px;
+}
+header nav a {
+  text-transform: uppercase;
+}
+header h1 + a {
+  margin-right: 20px;
+  word-spacing: 5px;
+  letter-spacing: 1px;
+}
+.fast_food {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (min-width:920px) {
+.organic_food {
+  /* "Grid"-@ ogtagorcum enq vorpeszi div-er dasavorvacutyun@ voroshenq!!! */
+  display: grid;
+  /* Ays hramanov sunyakneri qanakn enq talis */
+  /* "fr"-@ kochvum e mi bajin */
+  /*(4,1fr) Ays grelacev@ nshanakum e 4 hat havasar mas!!!! */
+  /* Nuyn grelacevn e (1fr 1fr 1fr 1fr) */
+  grid-template-columns: repeat(4, 1fr);
+  /* Ays "grid-column-gap"-ov  talis enq sunyakneri mijev heravorutyun!!!*/
+  grid-column-gap: 30px;
+}
+.organic_food ion-icon {
+  font-size: 4rem;
+  color: var(--acsentColor);
+}
+.organic_food h3 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.organic_food p {
+  line-height: 1.5;
+}
+}
+@media screen and (min-width:768px) and (max-width:920px) {
+  .organic_food {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  .organic_food ion-icon {
+    font-size: 4rem;
+    color: var(--acsentColor);
+  }
+  .organic_food h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .organic_food p {
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width:360px) and (max-width:768px) {
+  .organic_food {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 30px;
+  }
+  .organic_food ion-icon {
+    font-size: 4rem;
+    color: var(--acsentColor);
+  }
+  .organic_food h3 {
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .organic_food p {
+    line-height: 1.5;
+  }
+}
+/* img[alt="iPhone"] {
+  width: 300px;
+  /* Ays "transition" hramanov texasharjvelu varkyann en nshum!!! */
+  /* transition: 0.5s;
+}  */ 
+/* img[alt="iPhone"]:hover { */
+  /* Ays "translate" hramanov talis enq yndhanur horizonakan ev uxxahayac uxxutyamb texasharjvelu dirqy, ete tanq miayn mek arjeq miayn horizonakan uxxutyamb ktexasharjvi!!! */
+  /* transform: translate(100px);s */
+  /* Ays depqum pttvum e 45 astichanov */
+  /* transform: rotateX(45deg);
+  transform: rotateY(45deg); */
+/* Nkar mecacnum e 1.2 angam, ete scale 1ic mec enq talis mecanume e 1ic poqr poqranalu e, ete 2 arjeq enq talis- 1in horizonakan 2rd uxxahayac */
+/* transform: scale(1.2) */
+
+@media screen and (min-width:920px) {
+.cities {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 30px;
+}
+.cities img {
+  width: 100%;
+}
+.cities h2 {
+  /* Talis enq toxeri dasavorvacutyun */
+  grid-column: 1/5;
+}
+.cities ion-icon {
+  color: rgb(250, 166, 10);
+}
+.cities ul {
+  list-style-type: none;
+}
+}
+@media screen and (min-width:786px) and (max-width:920px) {
+  .cities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+  }
+  .cities img {
+    width: 100%;
+  }
+  .cities h2 {
+   grid-column: 1/3;
+}
+.cities ion-icon {
+  color: rgb(250, 166, 10);
+}
+.cities ul {
+  list-style-type: none;
+}
+}
+@media screen and (min-width:360px) and (max-width:786px) {
+  .cities {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 30px;
+  }
+  .cities img {
+    width: 100%;
+  }
+  .cities h2 {
+   grid-row: 1/5;
+}
+.cities ion-icon {
+  color: rgb(250, 166, 10);
+}
+.cities ul {
+  list-style-type: none;
+}
+}
+@media screen and (min-width:800px) {
+.comments {
+  background: linear-gradient(rgba(15, 13, 13, 0.904), rgba(14, 12, 13, 0.89)), url(../img/hero.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.comments h2 {
+  color: white;
+  padding-top: 40px;
+}
+.comments cite {
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+}
+.comments1 {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+  color: white;
+  font-weight: 100;
+  padding-bottom: 50px;
+}
+.comments img {
+  border-radius: 50px;
+  width: 40px;
+}
+}
+@media screen and (min-width:360px) and (max-width:800px) {
+  .comments {
+    background: linear-gradient(rgba(15, 13, 13, 0.904), rgba(14, 12, 13, 0.89)), url(../img/hero.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  .comments h2 {
+    color: white;
+    padding-top: 25px;
+  }
+  .comments cite {
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+  }
+  .comments1 {
+    width: 90%;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 10px;
+    color: white;
+    font-weight: 100;
+    padding-bottom: 30px;
+  }
+  .comments img {
+    border-radius: 50px;
+    width: 40px;
+  }
+}
+@media screen and (min-width:920px) {
+.work-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  margin-top: 100px;
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+}
+.work-steps h2 {
+  grid-column: 1/4;
+}
+
+.work-steps img {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.work-steps ul,
+.work-steps a {
+  grid-column: 3/4;
+} 
+.work-steps ul {
+  grid-row: 2/3;
+  list-style-type: none;
+}
+.work-steps a {
+  grid-row: 3/4;
+}
+.work-steps a:last-of-type {
+  margin-left: 230px;
+}
+.work-steps ul li {
+  margin-bottom: 30px;
+  margin-left: 80px;
+  line-height: 1.5;
+  font-style: 1.2;
+  position: relative;
+}
+.work-steps ul li span {
+  /* "display: table-cell;" Ays hraman dasils enq vor mer border sexan lini */
+  /* display: table-cell; */
+  padding: 10px;
+  color: var(--acsentColor);
+  border: var(--mainBorder);
+  width: 56px;
+  height: 56px;
+  font-size: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  /* Ays "vertical-align: middle;" hramann el talis enq vor ga uxxahayac uxxutyamb */
+  /* vertical-align: middle; */
+  position: absolute;
+  border-radius: 50%;
+  left: -70px;
+}
+}
+/* @media screen and (min-width:380px) and (max-width:920px) {
+  .work-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    margin-top: 100px;
+    grid-column-gap: 100px;
+    grid-row-gap: 50px;
+  }
+  .work-steps h2 {
+    grid-column: 1/4;
+  }
+  
+  .work-steps img {
+    grid-column: 2/3;
+    grid-row: 2/4;
+  }
+  .work-steps ul,
+  .work-steps a {
+    grid-column: 3/4;
+  } 
+  .work-steps ul {
+    grid-row: 2/3;
+    list-style-type: none;
+  }
+  .work-steps a {
+    grid-row: 3/4;
+  }
+  .work-steps a:last-of-type {
+    margin-left: 230px;
+  }
+  .work-steps ul li {
+    margin-bottom: 30px;
+    margin-left: 80px;
+    line-height: 1.5;
+    font-style: 1.2;
+    position: relative;
+  }
+  .work-steps ul li span {
+    /* "display: table-cell;" Ays hraman dasils enq vor mer border sexan lini */
+    /* display: table-cell; */
+    /* padding: 10px;
+    color: var(--acsentColor);
+    border: var(--mainBorder);
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    /* Ays "vertical-align: middle;" hramann el talis enq vor ga uxxahayac uxxutyamb */
+    /* vertical-align: middle; */
+    /* position: absolute;
+    border-radius: 50%;
+    left: -70px;
+  }
+}  */
+@media screen and (min-width:920px){
+.prices {
+  background-color: rgb(238, 231, 231);
+  padding-bottom: 60px;
+  margin-top: 80px;
+}
+.prices2 {
+  background-color: #fff;
+  text-align: left;
+}
+.prices2 h3 {
+   font-weight: 300;
+}
+.prices2 h3 + p {
+  font-size: 33px;
+  color: orange;
+}
+.prices2 small {
+  font-size: 16px;
+}
+
+.prices1{
+  width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  text-align: center;
+  padding-left: 180px;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+.prices1 ul li{
+  list-style-type: none;
+}
+.prices2 {
+  height: 370px;
+  padding-left: 25px;
+  line-height: 30px;
+}
+.prices2 input {
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: var(--acsentColor);
+  border: var(--mainBorder);
+  color: white;
+  margin-top: 50px;
+}
+.prices2 input:hover {
+  color: orange;
+  border: 3px solid orange;
+  background: white;
+}
+.prices3 p {
+  margin-bottom: 60px;
+}
+}
+@media screen and (min-width:360px) and (max-width:800px) {
+  .prices {
+    background-color: rgb(238, 231, 231);
+  }
+  .prices2 {
+    background-color: #fff;
+    text-align: left;
+  }
+  .prices2 h3 {
+     font-weight: 300;
+  }
+  .prices2 h3 + p {
+    font-size: 33px;
+    color: orange;
+  }
+  .prices2 small {
+    font-size: 16px;
+  }
+  
+  .prices1{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    text-align: center;
+    justify-content: center;
+  }
+  .prices1 ul li{
+    list-style-type: none;
+  }
+  .prices2 {
+    height: 370px;
+    line-height: 30px;
+  }
+  .prices2 input {
+    padding: 10px 25px;
+    border-radius: 25px;
+    background-color: var(--acsentColor);
+    border: var(--mainBorder);
+    color: white;
+    margin-top: 50px;
+  }
+  .prices2 input:hover {
+    color: orange;
+    border: 3px solid orange;
+    background: white;
+  }
+  .prices3 p {
+    margin-bottom: 60px;
+}}
+
+@media screen and (min-width:920px) {
+.form {
+   width: 70%;
+   margin: 80px auto;
+}
+.form form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+.form h2 {
+   grid-column: 1/3;
+}
+.form label {
+   grid-column: 1/2;
+   text-align: right;
+}
+.form input,
+.form select,
+.form textarea,
+.form div {
+   grid-column: 2/3;
+   padding: 10px 15px;
+}}
+/* .form input[type="submit"] {
+   width: 150px;
+} */
+@media screen and (min-width:360px) and (max-width: 920px){
+  .form label, 
+  .form input,
+  .form div,
+  .form input,
+  .form textarea,
+  .form form,
+  .form select {
+     display: block;
+     text-align: left;
+     width: 100%;
+     box-sizing: border-box;
+     margin: 20px 0;
+  }
+  .form select label[for="y"],
+  .form div:not(label div input) {
+    display: none;
+  }}
+footer {
+  background-color: black;
+  height: 40vh;
+}
+footer nav {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer nav ul {
+  display: flex;
+  list-style-type: none;
+}
+footer nav ul li a{
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(190, 189, 189);
+}
+footer nav ul li:not(footer nav ul li:first-of-type) {
+  margin-left: 25px;
+}
+footer nav ol{
+  display: flex;
+  list-style-type: none;
+}
+footer nav ol li a{
+  font-size: 16px;
+  font-weight: 300;
+  color: rgb(190, 189, 189);
+}
+footer nav ol li:not(footer nav ol li:last-of-type) {
+  margin-right: 25px;
+}
+footer p {  
+  text-align: center;
+  font-size: 16px;
+}
+footer p + p + p{
+  padding: 20px 0;
+}

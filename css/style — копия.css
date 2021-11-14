@@ -1,0 +1,159 @@
+/* CSS@ ashxatum e verevic nerqev!!! */
+/* Ays hraman@ nshanakum e classi meji "h2in" tanq karmir guyn  */
+/* Teg@ uni 1 miavor */
+/* class@ uni 10 miavor */
+/* "id"-n uni 100 miavor */
+/* style@ uni 1000 miavor */
+/* importent@ talis e 10000 miavor greluc grum enq "!importent" cevov!!! */
+/* Guym@ karox enq tal anunov, rgb(...)-ov u hegserov "#..." */
+/* Hesgserov grelis (0b5-@ hamarjeq e 00bb55in!!!) */
+/* colormania kam colorpickerov talis enq hegseri koder@!!! */
+/* Ays hramanov ekranin nkar enq talis bervac orinakum <header>-in!!!*/
+header {
+  /* "background-color@ grum enq vorpeszi ete nkar@ chbaci!!!" */
+  background-color: grey;
+  background-image: url(../img/customer-1.jpg);
+  /* Vorpeszi chkrkvi nkar@ petq e grenq "background-repeat: no-repeat" */
+  background-repeat: no-repeat;
+  /* Ays "repeat-x ekrani laynutyamb ekranin nkar@ mi qani angam kkrknver, is "y"-in talu depqum nerqevi uxxutyamb ksharonakver minchev "header"-@ verjana */
+  /* background-repeat: repeat-x; */
+  /* background-repeat: repeat-y; */
+  /* "background-position: horizonakan-px uxxahayac-px talis en te nkari inchqan vor uxxutyamb texapoxvel!!! ;" */
+  background-position: 100px 20px;
+  /* "background-position"-ov nayev bareov karox enq grel!!! */
+  background-position: left bottom;
+  /* Ays-hramanov nkar@ fixvum e ira dirqum.. ev kayq@ ijacnelu depqum nkar@ ir texum e mnum!!! */
+  background-attachment: fixed;
+  /* Ays "contein" hramanov enqan e nkar@ cgeluc hascnum e ekrani mi voreve uxxutyamb!! */
+  background-size: contain;
+  /* Ays "cover" hramanov amboxj nkarne e vercnum ekranov!!! */
+  background-size: cover;
+  /* Arajin@ grvim e "image" heto "repeat@" heto "attachment: fixed" heto position@ heto / background-sizen enq talis!!! Sa amboxj grac@ mek toxov grelacevn e!!!  */
+  /* Ays depqum vochmi ban@ partadir chi grel i tarberutyun naxkini (size-i ev font-famely-i) */
+  background: url(../img/customer-1.jpg) no-repeat fixed right top / cover;
+}
+#kk {
+  color: orchid;
+}
+.fast_food h2 {
+  color: red !important;
+}
+/* Ays hramanov talis enq bolor articlneri miji p-erin tal bac-erknaguyn!!! */
+articl p {
+  color: powderblue;
+}
+/* "+"Sa kochvum e headeric heto pakvac ev iran hajordox article@!!! */
+/* "Background-color@" talis e foni guyn@!!! */
+/* Ays kerp klini articlei meji article@ (header + article artcicle) */
+/* "+" nshan@ nshanakum e hajordox, isk grvac "article@"- article-i miji article@!!! */
+header + article article {
+  color: purple;
+  background-color: royalblue;
+}
+/* Sa nshanakum e ul-i meji arajin li-in */
+/* Ete grum enq "a"-n apa menak grvac texti fon e gunavorum, isk ete a-n chgrenq apa amboxh ekranov kvercni qani vor "ul"-@ blok tipi element e isk a-n inlne!!1  */
+/* Ete grum enq "first"-ov arajin@ kvercni ete lastov vergin@!!! */
+/* header ul li:first-of-type a  {
+    background-color: red;
+} */
+/* header ul li:last-of-type a  {
+    background-color: green;
+} */
+/* "nth"-@ cuyc e talis nshvac hamarin veraberox tegi hamar "orinak'"header ul li:nth-of-type(3) a" ays kerp!!!  */
+/* (an+b) amen "" "" "" */
+/* header ul li:nth-of-type(3) a  {
+    background-color: blue;
+} */
+/* "even"-bolor zuyg tver@, "odd"-@ bolor kent tver@ */
+/* header ul li:nth-of-type(3n+1) a  {
+    background-color: blue;
+} */
+header ul li:nth-of-type(even) a {
+  background-color: blue;
+}
+/* "type=[inputi-atribut] talis enq formi miji konkret inputin!!! */
+.abc input[type="url"] {
+  background-color: green;
+}
+.abc input[type="submit"] {
+  background-color: grey;
+}
+/* Texti het ashxatelu funkcianer!!! */
+/* fonter@ unen 5 taratesak */
+/* "font-famylineri" hamar mtnum enq <google-font> */
+/* ceragir-fonter, monospace-serf@ ev san-serf */
+/* monospace@ talis e bolor tareri hamar nuyn heravorutyun@!!! */
+/* standart taratesak displayi mej!!! */
+.fast_food p {
+  /* Grvac texti laynutyun e voroshum bervac orinakum 400px!!! */
+  /* overflow hiddeni depqum avel text@ jnjum e isk scroll kam uxaki auto */
+  width: 400px;
+  /* dotted-ays cevov ketiknerov e berum */
+  /* dashed-ays depqum gciknerov e sarqum uxxanyun@ */
+  border: 3px solid red;
+  border: 3px dotted red;
+  border: 3px dashed red;
+  border-top: 20px dashed red;
+  /* border@ nuynpes karox enq buttom, top, left ev rightov grel */
+  /* "boreder-radius@" talis e axyusaki cayreri kloracum.. nayev karox enq 2 arjeqov klorecne
+  !!! */
+  border-radius: 20px 40px;
+  padding: 25px;
+  height: 70px;
+  margin-left: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* Ays hramani depqum axyusak@ amboxjutyamb sarqum e 400px.. Amboxj bloki chapn 400px e!!! */
+  box-sizing: border-box;
+  /* Ays depqum amboxj grvac texti hamar y-scroll e grum!!! */
+  overflow: auto;
+  color: blue;
+  font-family: Roboto, Arial, sans-serif;
+  /* Tareri chabern e talis ays svoystvayov */
+  font-size: 20px;
+  /* Tarachapn e voroshum */
+  /* font-weight@ nayev (100-900) enq grum!!! */
+  /* "Bold"-ov grvac text@ mgacnum e!!! */
+  font-weight: bold;
+  /* "lighter"-ov grvac text@ arakacnum e!!! */
+  font-weight: lighter;
+  /* Text@ teq e darcnum!!! */
+  font-style: italic;
+  /* Texti miji mecatarerin chi kpnum mnacac poqratarer@ sarqum e mecatar */
+  font-variant: small-caps;
+  /* Textum grvac bareri mijtoxayin heravorutun@, sa misht petq e tarachapic mec lini!!! (20%-50%) vor lav kardacvi!!!  */
+  line-height: 24px;
+  /* Skzbum drvum weighti@ heto style@ heto variant@ heto size@/line-hight@ heto famelin */
+  /* Ays mi tox@ hamarjeq e vervi amboxj gracin!!! */
+  /* 1 toxov grelu depqum gone size@ kam famelyin petq e grvac lini aranc dranc chi lini!!! */
+  font: bold italic small-caps 20px/26px Roboto, Arial, sans-serif;
+  /* Ays kerp texti bolor bare@ grvac e mecatarerov!!! */
+  text-transform: uppercase;
+  /* Ays kerp texti bolor bare@ sarqum e poqratar!!1 */
+  text-transform: lowercase;
+  /* Ays kerp sarqum e bolor bareri 1in tarer@!!! */
+  text-transform: capitalize;
+  /* Text@ tanum e aj!!! */
+  text-align: right;
+  /* Text@ tanum e kentron */
+  text-align: center;
+  /* Text@ tanum e cax */
+  text-align: left;
+  /* Text@ havasarecnum e!!! */
+  text-align: justify;
+  /* Texti tak@ @ngcvace e */
+  text-decoration: underline;
+  /* Texti verevn e @ndgcum */
+  text-decoration: overline;
+  /* Grvac texti vra gic e qashum!!! */
+  text-decoration: line-through;
+  /* Text@ sksum e mi mat xorqic. bolor "p"-er@ sarqum e mi mat xorqic!!! */
+  text-indent: 20px;
+  /* Grvac textin talis e stver!!! */
+  /* 1in@ horizonakan-x 2-dd verev kam nerqev-y, stveri papkutyun@ verjin@ guyn@ stveri!!!*/
+  text-shadow: 3px 3px 5px blue;
+  /* Texti tareri mijev heravorutyunnn e talis */
+  letter-spacing: 5px;
+  /* Texti miji barerin talis e bervac orinakum 5px heravorutyun!!! */
+  word-spacing: 5px;
+}
